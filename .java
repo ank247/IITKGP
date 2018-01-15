@@ -1,3 +1,4 @@
+/***** Optimized Channel Transmission Interval distribution among the Packets. *****/
 
 public class ChannelTransmissionInterval
 {
