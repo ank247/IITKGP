@@ -1,6 +1,9 @@
 /***** Routing Table Formation Algorithm. *****/
 
 
+i/***** Routing Table Formation Algorithm. *****/
+
+
 import java.io.*;
 
 class TravelSalesManProblem 
@@ -12,7 +15,17 @@ class TravelSalesManProblem
           System.out.println(A[1][5] + " ");
           ; // sizeof A[][].
 //--------------------------------------------------------------------
-          
+          int i, j, k;
+          for(i = 0; i < n; i++)
+          {
+             for(j = 0; j < n; j++)
+               {
+                 while()
+                 {
+                     
+                 }
+               } 
+          }
           
       }
     public static void main (String[] args) 
@@ -28,3 +41,4 @@ class TravelSalesManProblem
           
 	  }
 }
+
