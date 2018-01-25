@@ -16,5 +16,7 @@
   Q8.How does Stepped Motors work?
   Q9.
   --> i)Cube. ii)Cuboid. iii)Rhomboid. iv)Hexagonal.  v)Triclinic. vi)Monoclinic.  vi)Tetragonal.
+  Q10.Various Tools?
+  --> i)Spur Gear.  ii)Rack & Pinion.  iii)Gear.  iv)Thread.  v)Screw.  vi)
 */
 
