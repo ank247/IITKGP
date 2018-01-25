@@ -19,31 +19,7 @@
   Q10.Various Tools?
   --> i)Spur Gear.  ii)Rack & Pinion.  iii)Gear.  iv)Thread.  v)Screw.  vi)
   Q11.Analysis of Machines?
-     i)Milling: 
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
+     i)Milling:       
 */
 
+public static class 
