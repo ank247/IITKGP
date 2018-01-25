@@ -18,5 +18,32 @@
   --> i)Cube. ii)Cuboid. iii)Rhomboid. iv)Hexagonal.  v)Triclinic. vi)Monoclinic.  vi)Tetragonal.
   Q10.Various Tools?
   --> i)Spur Gear.  ii)Rack & Pinion.  iii)Gear.  iv)Thread.  v)Screw.  vi)
+  Q11.Analysis of Machines?
+     i)Milling: 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
 */
 
