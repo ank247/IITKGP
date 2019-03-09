@@ -1,0 +1,6 @@
+set 'cat temp'
+for i in $*
+do
+  echo hello $i
+done
+

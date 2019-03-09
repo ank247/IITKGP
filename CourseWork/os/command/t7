@@ -1,0 +1,8 @@
+
+for i in $*
+do
+  y=$z
+  x=$i
+done
+echo $y
+

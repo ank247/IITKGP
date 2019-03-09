@@ -1,0 +1,3 @@
+set 'ls';
+echo I have $# files
+

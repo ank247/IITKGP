@@ -1,0 +1,1 @@
+x='date | cut -c12-13';y='date | cut -c15-16';echo it is $x hours $y minutes

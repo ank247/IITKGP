@@ -1,0 +1,6 @@
+echo Give month
+read x
+echo Give year
+read y
+cal $x $y
+

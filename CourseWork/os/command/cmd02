@@ -1,0 +1,15 @@
+y=$2
+case $1 in
+Jan) cal 1 $y;;
+Feb) cal 2 $y;; 
+Mar) cal 3 $y;;
+Apr)cal 4 $y;;
+May)cal 5 $y;;
+Jun)cal 6 $y;;
+Jul)cal 7 $y;;
+Aug)cal 8 $y;;
+Sep)cal 9 $y;;
+Oct)cal 10 $y;;
+Nov)cal 11 $y;;
+Dec)cal 12 $y;;
+esac

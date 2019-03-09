@@ -1,0 +1,7 @@
+case $# in
+1)m=$1;
+  set 'date';
+  cal $m $6;;
+2)cal $1 $2;;
+esac
+
