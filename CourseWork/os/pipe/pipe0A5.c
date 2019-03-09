@@ -4,11 +4,12 @@
 main()
 {
 int p[2],i; char c;
-p[0]=open("exp",O_RDONLY);
-p[1]=open("exp",O_WRONLY);
+pipe(p);
+close(p[0]);
 printf("%d %d",p[0],p[1]);
 write(p[1],"PQR",3);
-close(p[1]);
+printf("abc\n");
+
 for(i=1;i<=4;i++)
 {
 c='x';
