@@ -114,4 +114,5 @@ insert into Movie values(108, 'Raiders of the Lost Ark', 1981, 'Steven Spielberg
  insert into Rating values(1641, 107, 3, '2017-01-25'); 
 
 select FriendRoll from Friend where OwnRoll is (select RollNo from Student where name='Sachin');
+select title from Movie where mID is (select mID from Rating where stars=Null);
 
