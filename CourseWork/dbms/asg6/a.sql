@@ -47,4 +47,12 @@ create table Employee(
   manager_emp_cd int primary key not null
 );                          
 
+with recursive t(n) as(
+   values(0)
+   union all
+   select manager_emp_cd from Employee 
+   where emp_cd is not (insert emp_cd into Employee);
+);                         
+
+select manager_emp_cd from t;
                          
