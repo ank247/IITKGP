@@ -21,3 +21,10 @@ create table Registration(
   course_cd char(5) primary key not null, 
   grade_point int, 
   marks_obtained decimal(5,2)) ;
+
+create or replace function cgpa_func() 
+returns trigger as $cg_update$
+begin
+  update student set cgpa where student.roll_no=Registration.roll_no;
+  returning new;
+end;
