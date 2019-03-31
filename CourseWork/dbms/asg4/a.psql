@@ -1,9 +1,37 @@
 
-create table Student(RollNo int PRIMARY KEY, name varchar(20), class int); 
-create table Friend(OwnRoll int, FriendRoll int, FOREIGN KEY fk_std1(OwnRoll) REFERENCES Student(RollNo), FOREIGN KEY fk_std2(FriendRoll) REFERENCES Student(RollNo),PRIMARY KEY(OwnRoll,FriendRoll)); 
-create table Likes(OwnRoll int, FriendRoll int, FOREIGN KEY fk_std1(OwnRoll) REFERENCES Student(RollNo), FOREIGN KEY fk_std2(FriendRoll) REFERENCES Student(RollNo),PRIMARY KEY(OwnRoll,FriendRoll)); 
-create table Movie(mID int PRIMARY KEY, title varchar(30), year int, director varchar(20)); 
-create table Rating(RollNo int, mID int, stars int, ratingDate date, FOREIGN KEY fk_std(RollNo) REFERENCES Student(RollNo), FOREIGN KEY fk_mv(mID) REFERENCES Movie(mID),PRIMARY KEY(RollNo,mID,stars)); 
+create table Student(
+      RollNo int PRIMARY KEY, 
+      name varchar(20), 
+      class int); 
+      
+create table Friend(
+     OwnRoll int, 
+     FriendRoll int, 
+     FOREIGN KEY fk_std1(OwnRoll) REFERENCES Student(RollNo), 
+     FOREIGN KEY fk_std2(FriendRoll) REFERENCES Student(RollNo),
+     PRIMARY KEY(OwnRoll,FriendRoll)); 
+     
+create table Likes(
+     OwnRoll int,
+     FriendRoll int, 
+     FOREIGN KEY fk_std1(OwnRoll) REFERENCES Student(RollNo), 
+     FOREIGN KEY fk_std2(FriendRoll) REFERENCES Student(RollNo),
+     PRIMARY KEY(OwnRoll,FriendRoll));
+     
+create table Movie(
+     mID int PRIMARY KEY, 
+     title varchar(30), 
+     year int, 
+     director varchar(20));
+     
+create table Rating(
+     RollNo int, 
+     mID int, 
+     stars int, 
+     ratingDate date, 
+     FOREIGN KEY fk_std(RollNo) REFERENCES Student(RollNo), 
+     FOREIGN KEY fk_mv(mID) REFERENCES Movie(mID),
+     PRIMARY KEY(RollNo,mID,stars)); 
 
 insert into Student values (1510, 'Anubhav', 9); 
 insert into Student values (1689, 'Deepika', 9); 
