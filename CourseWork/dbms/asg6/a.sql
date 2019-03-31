@@ -33,3 +33,13 @@ $cg_update$ language plpgsql;
 create trigger cgpa_trigger 
 after insert on Registration
 for each row execute procedure cgpa_func();
+
+insert into Registration values(3,'dbms',5,76.0);
+
+with cgpa_procedure as(
+  update student set cgpa on student.roll_no=roll_no;
+  returning student.cgpa);
+
+insert into cgpa_procedure values(1);
+                         
+                         
