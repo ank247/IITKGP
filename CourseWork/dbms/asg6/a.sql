@@ -28,3 +28,8 @@ begin
   update student set cgpa where student.roll_no=Registration.roll_no;
   returning new;
 end;
+$cg_update$ language plpgsql;
+                         
+create trigger cgpa_trigger 
+after insert on Registration
+for each row execute procedure cgpa_func();
