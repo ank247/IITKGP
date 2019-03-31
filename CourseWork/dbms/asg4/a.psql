@@ -1,1 +1,87 @@
 
+create table Student(RollNo int PRIMARY KEY, name varchar(20), class int); 
+create table Friend(OwnRoll int, FriendRoll int, FOREIGN KEY fk_std1(OwnRoll) REFERENCES Student(RollNo), FOREIGN KEY fk_std2(FriendRoll) REFERENCES Student(RollNo),PRIMARY KEY(OwnRoll,FriendRoll)); 
+create table Likes(OwnRoll int, FriendRoll int, FOREIGN KEY fk_std1(OwnRoll) REFERENCES Student(RollNo), FOREIGN KEY fk_std2(FriendRoll) REFERENCES Student(RollNo),PRIMARY KEY(OwnRoll,FriendRoll)); 
+create table Movie(mID int PRIMARY KEY, title varchar(30), year int, director varchar(20)); 
+create table Rating(RollNo int, mID int, stars int, ratingDate date, FOREIGN KEY fk_std(RollNo) REFERENCES Student(RollNo), FOREIGN KEY fk_mv(mID) REFERENCES Movie(mID),PRIMARY KEY(RollNo,mID,stars)); 
+
+insert into Student values (1510, 'Anubhav', 9); 
+insert into Student values (1689, 'Deepika', 9); 
+insert into Student values (1381, 'Debajyoti', 9); 
+insert into Student values (1709, 'Sachin', 9); 
+insert into Student values (1101, 'Sunaina', 10); 
+insert into Student values (1782, 'Sharmila', 10); 
+insert into Student values (1468, 'Krushna', 10); 
+insert into Student values (1641, 'Parikshit', 10); 
+insert into Student values (1247, 'Deepak', 11); 
+insert into Student values (1316, 'Harsha', 11); 
+insert into Student values (1911, 'Deepika', 11); 
+insert into Student values (1501, 'Mayank', 11); 
+insert into Student values (1304, 'Anubhav', 12); 
+insert into Student values (1025, 'Rishabh', 12); 
+insert into Student values (1934, 'Shikha', 12); 
+insert into Student values (1661, 'Achal', 12); 
+
+insert into Friend values (1510, 1381); 
+insert into Friend values (1510, 1689); 
+insert into Friend values (1689, 1709); 
+insert into Friend values (1381, 1247); 
+insert into Friend values (1709, 1247); 
+insert into Friend values (1689, 1782); 
+insert into Friend values (1782, 1468); 
+insert into Friend values (1782, 1316); 
+insert into Friend values (1782, 1304); 
+insert into Friend values (1468, 1101); 
+insert into Friend values (1468, 1641); 
+insert into Friend values (1101, 1641); 
+insert into Friend values (1247, 1911); 
+insert into Friend values (1247, 1501); 
+insert into Friend values (1911, 1501); 
+insert into Friend values (1501, 1934); 
+insert into Friend values (1316, 1934); 
+insert into Friend values (1934, 1304); 
+insert into Friend values (1304, 1661); 
+insert into Friend values (1661, 1025); 
+insert into Friend values (1510, 1304);
+
+insert into Likes values(1689, 1709); 
+insert into Likes values(1709, 1689); 
+insert into Likes values(1782, 1709); 
+insert into Likes values(1911, 1247); 
+insert into Likes values(1247, 1468); 
+insert into Likes values(1641, 1468); 
+insert into Likes values(1316, 1304); 
+insert into Likes values(1501, 1934); 
+insert into Likes values(1934, 1501); 
+insert into Likes values(1025, 1101); 
+insert into Likes values(1381, 1510); 
+insert into Likes values(1689, 1510); 
+insert into Likes values(1304, 1510); 
+
+insert into Movie values(101, 'Gone with the Wind', 1939, 'Victor Fleming'); 
+insert into Movie values(102, 'Star Wars', 1977, 'George Lucas'); 
+insert into Movie values(103, 'The Sound of Music', 1965, 'Robert Wise'); 
+insert into Movie values(104, 'E.T.', 1982, 'Steven Spielberg'); 
+insert into Movie values(105, 'Titanic', 1997, 'James Cameron'); 
+insert into Movie values(106, 'Snow White', 1937, null); 
+insert into Movie values(107, 'Avatar', 2009, 'James Cameron'); 
+insert into Movie values(108, 'Raiders of the Lost Ark', 1981, 'Steven Spielberg'); 
+ 
+ insert into Rating values(1510, 101, 2, '2017-01-22'); 
+ insert into Rating values(1510, 101, 4, '2017-01-27'); 
+ insert into Rating values(1510, 103, 4, '2017-01-22'); 
+ insert into Rating values(1510, 104, 5, '2017-01-22'); 
+ insert into Rating values(1689, 106, 4, null); 
+ insert into Rating values(1381, 103, 2, '2017-01-20'); 
+ insert into Rating values(1381, 108, 4, '2017-01-12'); 
+ insert into Rating values(1381, 108, 2, '2017-01-30'); 
+ insert into Rating values(1709, 101, 3, '2017-01-09'); 
+ insert into Rating values(1101, 103, 3, '2017-01-27'); 
+ insert into Rating values(1101, 104, 2, '2011-01-22'); 
+ insert into Rating values(1101, 108, 4, null); 
+ insert into Rating values(1782, 107, 3, '2017-01-15'); 
+ insert into Rating values(1782, 106, 5, '2017-01-19'); 
+ insert into Rating values(1468, 107, 5, '2017-01-20'); 
+ insert into Rating values(1641, 104, 3, '2017-01-02'); 
+ insert into Rating values(1641, 107, 3, '2017-01-25'); 
+
