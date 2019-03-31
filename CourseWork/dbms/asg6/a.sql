@@ -42,4 +42,9 @@ with cgpa_procedure as(
 
 insert into cgpa_procedure values(1);
                          
+create table Employee(
+  emp_cd int primary key not null, 
+  manager_emp_cd int primary key not null
+);                          
+
                          
