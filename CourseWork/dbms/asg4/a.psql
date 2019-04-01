@@ -116,8 +116,9 @@ insert into Rating values(1641, 107, 3, '2017-01-25');
 select FriendRoll from Friend where OwnRoll is (select RollNo from Student where name='Sachin');
 select title from Movie where mID is (select mID from Rating where stars=Null);
 select director, title from (Rating join Movie group by director) where stars=max(stars);
-select class from (select RollNo, class from Student) join (select RollNo, mID, stars from Rating) as student_rating
-where student_rating.mID is (select mID from student_rating) and student_rating.stars is (select stars from student_rating);
+select name, student_rating1.name, class, student_rating1.class from Student full outer join Rating as student_rating 
+where student_rating.mID is (select mID from student_rating) as student_rating1 and student_rating.stars 
+is (select stars from student_rating) as student_rating1;
 select FriendRoll from Friend where OwnRoll is (select RollNo from Student where name='Sachin');
 select FriendRoll from Friend where OwnRoll is (select RollNo from Student where name='Sachin');
 select FriendRoll from Friend where OwnRoll is (select RollNo from Student where name='Sachin');
