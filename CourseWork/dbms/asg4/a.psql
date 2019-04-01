@@ -119,7 +119,7 @@ select director, title from (Rating join Movie group by director) where stars=ma
 select name, student_rating1.name, class, student_rating1.class from Student full outer join Rating as student_rating 
 where student_rating.mID is (select mID from student_rating) as student_rating1 and student_rating.stars 
 is (select stars from student_rating) as student_rating1;
-select FriendRoll from Friend where OwnRoll is (select RollNo from Student where name='Sachin');
+select avg(count(*)) from Friend group by OwnRoll;
 select FriendRoll from Friend where OwnRoll is (select RollNo from Student where name='Sachin');
 select FriendRoll from Friend where OwnRoll is (select RollNo from Student where name='Sachin');
 select FriendRoll from Friend where OwnRoll is (select RollNo from Student where name='Sachin');
