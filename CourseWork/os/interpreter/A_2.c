@@ -37,5 +37,5 @@ print(k)
 Output: 7
 
 when u=9
-Output: 9
+Output: 3
 */
