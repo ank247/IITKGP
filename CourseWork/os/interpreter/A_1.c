@@ -19,5 +19,15 @@ main()
          printf("%d\n",a[x[6]]);
          sleep(1);
        }
-    }(while(1));
+    }while(1);
 }
+
+/*
+Input:
+k=7
+m=2
+u=k+m
+print(u)
+
+Output: 9
+*/
