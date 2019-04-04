@@ -4,7 +4,7 @@
 main()
 {
   char x[20];
-  int a[200],count=0;
+  int a[200];
   do{
       scanf("%s", x);
       if((x[1]=='=')&&(x[2]=='['))
@@ -30,8 +30,7 @@ main()
        {
          a[97+x[1]-48]=x[4]-48;
        }
-       count+=1;
-    }while(count<8);
+    }while(1);
 }
 
 /*
@@ -48,4 +47,15 @@ d=6
 k=[4]
 print(k)
 Output: 6
+
+g=4
+d=7
+e=9
+k=[g]
+print(k)
+Output: 4
+
+when [5]=9
+print(e)
+Output: 9
 */
