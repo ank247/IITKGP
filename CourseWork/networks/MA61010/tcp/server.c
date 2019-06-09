@@ -15,7 +15,6 @@ main()
  sockfd=socket(AF_INET,SOCK_STREAM,0);
  sa.sin_family=AF_INET;
  sa.sin_addr.s_addr=INADDR_ANY;
-// sa.sin_port=6001;
  printf("Give self port no.:");
  scanf("%d",&sa.sin_port);
  i=bind(sockfd,(struct sockaddr *)&sa,len);
@@ -25,14 +24,9 @@ main()
  printf("[%d]\n",fd);
  recv(fd,&p,4,0);
  printf("client sent %d\n",p);
- p=2*p;
- printf("Double the value:\n");
- send(fd,&p,4,0);
- sleep(5);
-// printf("\nGive string to send to client");
-// recv(fd,&p,4,0);
-// scanf("%s",b);
-// send(fd,b,50,0);
+ printf("\nGive string to send to client");
+ scanf("%s",b);
+ send(fd,b,50,0);
  return 0;
 }
 
