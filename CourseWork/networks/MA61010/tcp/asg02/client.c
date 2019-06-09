@@ -25,11 +25,7 @@ main()
  scanf("%d",&a);
  send(sockfd,&a,4,0);
  recv(sockfd,&a,4,0);
- printf("\nDouble value:%d",a);
-// send(sockfd,&a,4,0);
-// sleep(12);
-// recv(sockfd,q,50,0);
-// printf("\nserver sent %s\n",q);
+ printf("\nvalue:%d\n",a);
  return 0;
 }
 
