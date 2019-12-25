@@ -14,28 +14,25 @@
 
 
 
+
+#include<stdio.h>
+
 struct Node{
   int num;
-  int constant=100;
-  struct Node*next = Null;
+  struct Node* next;
 };
 
+struct Node* nd=NULL;
 
+void linkedList(int num){
+ struct Node node;
+ while(node.next!=NULL){
+    node.num=node.next;
+ } 
 
-struct linkedList{
-  struct Node*node;
-  while(node->next != Null)
-  {
-      node=node->next;
-  }
-  void append(num)
-  {
-    node->num=num;
-    node=node->next;
-  }
-};
-
-
+   node.num=num;
+   node.next=nd;
+}
 
 void sys_init(){
   int amount=100;
@@ -77,5 +74,18 @@ void reach_consensus(){
 
 main()
 {
-
+  int i, n;
+  n=5;
+  while(n--){
+    scanf("Give No.: %d",&i);
+    linkedList(i);
+  }
+  return 0;
 }
+
+
+
+
+
+
+
