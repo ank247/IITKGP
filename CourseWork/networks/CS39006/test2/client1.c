@@ -6,32 +6,28 @@
  *
  */
 
-
 #include<stdio.h>
 #include<net.h>
 #include<sys/types.h>
 #include<>
-
-
-
-
-#include<stdio.h>
 
 struct Node{
   int num;
   struct Node* next;
 };
 
-struct Node* nd=NULL;
+struct Node* head=NULL;
 
 void linkedList(int num){
- struct Node node;
- while(node.next!=NULL){
-    node.num=node.next;
- } 
+ struct Node*node;
+ node->num=num;
+ node->next=head;
+ printf("%d ",node->num);
+ head=node;
+}
 
-   node.num=num;
-   node.next=nd;
+void printList(){
+ 
 }
 
 void sys_init(){
@@ -74,18 +70,12 @@ void reach_consensus(){
 
 main()
 {
-  int i, n;
+  int i, n, j;
   n=5;
   while(n--){
-    scanf("Give No.: %d",&i);
+    printf("Give No.: ");
+    scanf("%d",&i);
     linkedList(i);
   }
   return 0;
-}
-
-
-
-
-
-
-
+} 
