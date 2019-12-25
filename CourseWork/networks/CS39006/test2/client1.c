@@ -1,6 +1,21 @@
 
-void sys_init(){
+/*
+ * For public ledger each node will have linkedlist to add transactions.
+ *
+ *
+ *
+ */
 
+
+#include<stdio.h>
+#include<net.h>
+#include<sys/types.h>
+#include<>
+
+struct 
+
+void sys_init(){
+  int amount=100;
 }
 
 void initiate_transaction(){
