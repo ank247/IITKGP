@@ -12,7 +12,13 @@
 #include<sys/types.h>
 #include<>
 
-struct 
+struct Node{
+  
+};
+
+struct linkedList{
+
+};
 
 void sys_init(){
   int amount=100;
