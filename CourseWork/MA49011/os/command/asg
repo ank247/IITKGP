@@ -1,0 +1,55 @@
+
+
+if["$1"="cala"]
+cal $3 $2
+else if["$1"="calb"]
+cal $1 $3
+else if["$1"="calc"]
+for i in $*
+cal $i 1995
+else if["$1"="cald"]
+for i in $*
+cal $i
+else if["$1"="cale"]
+for i in $*
+cal $i
+else if["$1"="calf"]
+for i in $*
+cal $i
+else if["$1"="calg"]
+for i in $*
+cal $i
+else if["$1"="today"]
+for i in $*
+cal $i
+else if["$1"="dayname"]
+for i in $*
+cal $i
+else if["$1"="currentcalender"]
+for i in $*
+cal $i
+else if["$1"="date1"]
+for i in $*
+cal $i
+else if["$1"="latetime"]
+for i in $*
+cal $i
+else if["$1"="inshort"]
+for i in $*
+cal $i
+else if["$1"="putcal"]
+for i in $*
+cal $i
+else if["$1"="filecontents"]
+for i in $*
+cal $i
+else if["$1"="calall"]
+for i in $*
+cal $i
+else if["$1"="calall1"]
+for i in $*
+cal $i
+else if["$1"="wel"]
+echo hello $1
+echo good morning $*
+
